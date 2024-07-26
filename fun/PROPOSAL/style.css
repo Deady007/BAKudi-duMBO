@@ -1,0 +1,61 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.bg_heart {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bg_heart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes slideshow {
+  0% { opacity: 1; }
+  20% { opacity: 0; }
+  40% { opacity: 0; }
+  60% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+.bg_heart img:nth-child(1) {
+  animation: slideshow 25s infinite;
+}
+
+.bg_heart img:nth-child(2) {
+  animation: slideshow 25s infinite 5s;
+}
+
+.bg_heart img:nth-child(3) {
+  animation: slideshow 25s infinite 10s;
+}
+
+.bg_heart img:nth-child(4) {
+  animation: slideshow 25s infinite 15s;
+}
+
+.bg_heart img:nth-child(5) {
+  animation: slideshow 25s infinite 20s;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding-top: 50px;
+}
