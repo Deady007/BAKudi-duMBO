@@ -10,6 +10,7 @@ body {
   background-size: cover; /* Cover the entire viewport */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-position: center;
+  background-attachment: fixed; /* Keep the background fixed */
   font-family: Chaucer;
   color: var(--font-color);
   display: flex;
@@ -21,11 +22,16 @@ body {
 .textCont {
   font-size: 1.5em; /* Adjusted for a relative size */
   color: var(--font-color);
+  font-weight: bold;
   margin-top: 10%;
   margin-left: 5px;
   margin-right: 5px;
-  width: 60%;
-  height: 80%;
+  width: 80%; /* Increased width for better readability */
+  height: auto; /* Allow height to adjust based on content */
+  max-height: 80vh; /* Limit height to viewport height */
+  overflow: auto; /* Enable scrolling if content exceeds height */
+  position: relative; /* Ensure positioning within viewport */
+  font-family: 'Mouse Memoirs', cursive;
 }
 
 .textCont::after {
@@ -46,7 +52,10 @@ footer {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  z-index: 100;
+  z-index: 100; /* Ensure footer is on top of other content */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+  border-radius: 5px; /* Optional: rounded corners */
+  padding: 10px; /* Optional: padding for better appearance */
 }
 
 footer > a {
@@ -56,7 +65,7 @@ footer > a {
   font-family: "Megrim";
   font-size: 1.1em;
   text-decoration: none;
-  padding: 5px 20px;
+  padding: 10px 20px; /* Increased padding for better click area */
   border: 3px solid var(--font-color);
   transition: color 0.5s linear, box-shadow 0.5s ease-in;
 }
@@ -76,34 +85,34 @@ footer > a {
 /* Responsive styles */
 @media only screen and (max-width: 600px) {
   .textCont {
-    font-size: 0.6em; /* Slightly smaller font size for mobile */
+    font-size: 0.8em; /* Adjust font size for mobile */
     width: 90%;
     margin-top: 5%;
   }
   
   footer > a {
-    padding: 5px 10px;
-    font-size: 0.4em; /* Adjust font size for mobile */
+    padding: 8px 15px;
+    font-size: 0.8em; /* Adjust font size for mobile */
   }
   
   .song {
-    font-size: 0.5em; /* Adjust font size for mobile */
-    right: 2%;
+    font-size: 0.8em; /* Adjust font size for mobile */
+    right: 5%;
   }
 }
 
 @media only screen and (max-width: 400px) {
   .textCont {
-    font-size: 0.5em; /* Further decrease font size for very small screens */
+    font-size: 0.7em; /* Further decrease font size for very small screens */
     width: 95%;
   }
   
   footer > a {
-    padding: 5px 5px;
-    font-size: 0.4em; /* Further decrease font size for very small screens */
+    padding: 5px 10px;
+    font-size: 0.6em; /* Further decrease font size for very small screens */
   }
   
   .song {
-    font-size: 0.5em; /* Further decrease font size for very small screens */
+    font-size: 0.6em; /* Further decrease font size for very small screens */
   }
 }
