@@ -1,118 +1,62 @@
-:root {
-  --theme-color: #285685;
-  --font-color: #ffc765;
-  --shade1: rgba(242, 38, 19, 0.5);
-  --shade2: rgba(0, 255, 255, 0.5);
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
-body {
-  background-image: url('BG2.jpg');
-  background-size: cover; /* Cover the entire viewport */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-position: center;
-  background-attachment: fixed; /* Keep the background fixed */
-  font-family: Chaucer;
-  color: var(--font-color);
-  display: flex;
-  justify-content: center;
+body, html {
+  height: 100%;
   margin: 0;
-  padding: 0;
+  font-size: larger;
+  font-family: 'Dancing Script', cursive;
+  overflow: auto;
 }
 
-.textCont {
-  font-size: 1.5em; /* Adjusted for a relative size */
-  color: var(--font-color);
-  font-weight: bold;
-  margin-top: 10%;
-  margin-left: 5px;
-  margin-right: 5px;
-  width: 80%; /* Increased width for better readability */
-  height: auto; /* Allow height to adjust based on content */
-  max-height: 80vh; /* Limit height to viewport height */
-  overflow: auto; /* Enable scrolling if content exceeds height */
-  position: relative; /* Ensure positioning within viewport */
-  font-family: 'Mouse Memoirs', cursive;
-}
-
-.textCont::after {
-  content: "|";
-  animation: blinky 1s linear infinite;
-}
-
-@keyframes blinky {
-  0%, 49.9% {
-    opacity: 0;
-  }
-  50%, 99.9% {
-    opacity: 1;
-  }
-}
-
-footer {
+.bg_heart {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 100; /* Ensure footer is on top of other content */
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
-  border-radius: 5px; /* Optional: rounded corners */
-  padding: 10px; /* Optional: padding for better appearance */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-footer > a {
-  background-color: transparent;
-  color: var(--font-color);
-  font-weight: bold;
-  font-family: "Megrim";
-  font-size: 1.1em;
-  text-decoration: none;
-  padding: 10px 20px; /* Increased padding for better click area */
-  border: 3px solid var(--font-color);
-  transition: color 0.5s linear, box-shadow 0.5s ease-in;
-}
-
-.song {
-  display: flex;
-  align-items: center;
-  font-size: 1.1em;
-  right: 5%;
+.bg_heart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
+  opacity: 1;
 }
 
-.pause {
-  cursor: pointer;
+.container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: linear-gradient(to bottom, #fdfdfd, #FFFFFF);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 
+    -1px -1px 0 #FFF;
 }
 
-/* Responsive styles */
-@media only screen and (max-width: 600px) {
-  .textCont {
-    font-size: 0.8em; /* Adjust font size for mobile */
-    width: 90%;
-    margin-top: 5%;
-  }
-  
-  footer > a {
-    padding: 8px 15px;
-    font-size: 0.8em; /* Adjust font size for mobile */
-  }
-  
-  .song {
-    font-size: 0.8em; /* Adjust font size for mobile */
-    right: 5%;
-  }
+/* Style the button */
+#yesButton {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  padding: 15px 32px; /* Add padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display inline-block */
+  font-size: 16px; /* Set font size */
+  margin: 10px 2px; /* Margin for spacing */
+  cursor: pointer; /* Change cursor to pointer */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-@media only screen and (max-width: 400px) {
-  .textCont {
-    font-size: 0.7em; /* Further decrease font size for very small screens */
-    width: 95%;
-  }
-  
-  footer > a {
-    padding: 5px 10px;
-    font-size: 0.6em; /* Further decrease font size for very small screens */
-  }
-  
-  .song {
-    font-size: 0.6em; /* Further decrease font size for very small screens */
-  }
+#yesButton:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
+
+#yesButton:focus {
+  outline: none; /* Remove default focus outline */
+}
+
