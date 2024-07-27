@@ -76,34 +76,34 @@ footer > a {
 /* Responsive styles */
 @media only screen and (max-width: 600px) {
   .textCont {
-    font-size: 1.2em; /* Slightly smaller font size for mobile */
+    font-size: 0.6em; /* Slightly smaller font size for mobile */
     width: 90%;
     margin-top: 5%;
   }
   
   footer > a {
     padding: 5px 10px;
-    font-size: 0.9em; /* Adjust font size for mobile */
+    font-size: 0.4em; /* Adjust font size for mobile */
   }
   
   .song {
-    font-size: 1em; /* Adjust font size for mobile */
+    font-size: 0.5em; /* Adjust font size for mobile */
     right: 2%;
   }
 }
 
 @media only screen and (max-width: 400px) {
   .textCont {
-    font-size: 1em; /* Further decrease font size for very small screens */
+    font-size: 0.5em; /* Further decrease font size for very small screens */
     width: 95%;
   }
   
   footer > a {
     padding: 5px 5px;
-    font-size: 0.8em; /* Further decrease font size for very small screens */
+    font-size: 0.4em; /* Further decrease font size for very small screens */
   }
   
   .song {
-    font-size: 0.9em; /* Further decrease font size for very small screens */
+    font-size: 0.5em; /* Further decrease font size for very small screens */
   }
 }
