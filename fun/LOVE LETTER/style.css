@@ -1,67 +1,67 @@
-m:root{
+:root {
   --theme-color: #285685;
   --font-color: #ffc765;
   --shade1: rgba(242, 38, 19, 0.5);
   --shade2: rgba(0, 255, 255, 0.5);
 }
-.textCont{
-  font-size: 150%;
-  color: #ffc765;
+
+body {
+  background-image: url('BG2.jpg');
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center;
+  font-family: Chaucer;
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.textCont {
+  font-size: 1.5em; /* Adjusted for a relative size */
+  color: var(--font-color);
   margin-top: 10%;
   margin-left: 5px;
   margin-right: 5px;
   width: 60%;
   height: 80%;
 }
-body{
-  background-color: rgb(0, 0, 0);
-  font-family: Chaucer;
-  color: var(--font-color);
-  display: flex;
-  justify-content: center;
-}
 
-div.textCont::after{
+.textCont::after {
   content: "|";
   animation: blinky 1s linear infinite;
 }
 
-@keyframes blinky{
-  0%{
+@keyframes blinky {
+  0%, 49.9% {
     opacity: 0;
   }
-  49.9%{
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  99.9%{
+  50%, 99.9% {
     opacity: 1;
   }
 }
 
-footer{
+footer {
   position: fixed;
   bottom: 25px;
   right: 25px;
   z-index: 100;
 }
 
-footer > a{
+footer > a {
   background-color: transparent;
   color: var(--font-color);
   font-weight: bold;
   font-family: "Megrim";
-  font-size: 110%;
+  font-size: 1.1em;
   text-decoration: none;
   padding: 5px 20px;
-
   border: 3px solid var(--font-color);
   transition: color 0.5s linear, box-shadow 0.5s ease-in;
 }
 
-.song{
+.song {
   display: flex;
   align-items: center;
   font-size: 1.1em;
@@ -69,18 +69,41 @@ footer > a{
   position: absolute;
 }
 
-.pause{
+.pause {
   cursor: pointer;
 }
 
-/* Responsive screen styles */
+/* Responsive styles */
 @media only screen and (max-width: 600px) {
-  .textCont{
+  .textCont {
+    font-size: 1.2em; /* Slightly smaller font size for mobile */
     width: 90%;
+    margin-top: 5%;
   }
   
-  footer > a{
+  footer > a {
     padding: 5px 10px;
-    font-size: 90%;
+    font-size: 0.9em; /* Adjust font size for mobile */
+  }
+  
+  .song {
+    font-size: 1em; /* Adjust font size for mobile */
+    right: 2%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .textCont {
+    font-size: 1em; /* Further decrease font size for very small screens */
+    width: 95%;
+  }
+  
+  footer > a {
+    padding: 5px 5px;
+    font-size: 0.8em; /* Further decrease font size for very small screens */
+  }
+  
+  .song {
+    font-size: 0.9em; /* Further decrease font size for very small screens */
   }
 }
